@@ -7,7 +7,8 @@ const app = new Vue({
     count:0,
     //log the status from the server side
     status:"",
-    url:""
+    url:"",
+    id:""
   },
   watch:{
     //watch the userInput 
@@ -20,12 +21,12 @@ const app = new Vue({
   },
   mounted : function(){
       this.getData();
-      this.getUrl();
+      this.getId();
   },
   methods:{
     //get the original data from the server side
     getData:function(){
-      axios.get('http://47.241.127.18/api/get.php')
+      axios.get('http://47.241.127.18/api/get.php?id=')
       .then(response => this.userInput = response.data)
       .catch(error => console.log(error));
 
@@ -39,6 +40,11 @@ const app = new Vue({
     //get url
     getUrl:function(){
       this.url = location.pathname ; ;
+    },
+    //get id from url
+    getId:function(){
+      this.getUrl();
+      this.id = url.split('/');
     }
   }
    
