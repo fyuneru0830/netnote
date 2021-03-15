@@ -44,7 +44,7 @@ const app = new Vue({
     //get id from url
     getId:function(){
       this.getUrl();
-      this.id = url.split('/');
+      this.id = this.url.split('/');
     }
   }
    
