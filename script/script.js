@@ -20,8 +20,8 @@ const app = new Vue({
     }
   },
   mounted : function(){
-      this.getData();
       this.getId();
+      this.getData();
   },
   methods:{
     //get the original data from the server side
