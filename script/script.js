@@ -36,7 +36,7 @@ const app = new Vue({
         var params = new URLSearchParams();
         params.append('id', this.id);
         params.append('value', this.userInput);
-        const res = await axios.post('http://47.241.127.18/api/save.php', params);
+        const res = axios.post('http://47.241.127.18/api/save.php', params);
         // axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'&value=' + this.userInput)
         //   .then(response => this.status = response.data)
         //   .catch(error => console.log(error));
