@@ -6,7 +6,8 @@ const app = new Vue({
     //count the char
     count:0,
     //log the status from the server side
-    status:""
+    status:"",
+    url:""
   },
   watch:{
     //watch the userInput 
@@ -19,6 +20,7 @@ const app = new Vue({
   },
   mounted : function(){
       this.getData();
+      this.getUrl();
   },
   methods:{
     //get the original data from the server side
@@ -33,6 +35,10 @@ const app = new Vue({
         axios.get('http://47.241.127.18/api/save.php?value=' + this.userInput)
           .then(response => this.status = response.data)
           .catch(error => console.log(error));
+    },
+    //get url
+    getUrl:function(){
+      this.url = location.href ;
     }
   }
    
