@@ -33,13 +33,17 @@ const app = new Vue({
     },
     //push the data to server side
     pushData:function(){
-        axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'&value=' + this.userInput)
-          .then(response => this.status = response.data)
-          .catch(error => console.log(error));
+        var params = new URLSearchParams();
+        params.append('id', this.id);
+        params.append('value', this.userInput);
+        const res = await axios.post('http://47.241.127.18/api/save.php', params);
+        // axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'&value=' + this.userInput)
+        //   .then(response => this.status = response.data)
+        //   .catch(error => console.log(error));
     },
     //get url
     getUrl:function(){
-      this.url = location.pathname ; ;
+      this.url = location.pathname;
     },
     //get id from url
     getId:function(){
