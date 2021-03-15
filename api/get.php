@@ -8,7 +8,7 @@ if( $mysqli->connect_errno ) {
 
 $mysqli->set_charset('utf8');
 
-$sql = 'SELECT dvalue from data where did=1';
+$sql = "SELECT dvalue from data where did='".$_GET['id']."'";
 $res = $mysqli->query($sql);
 
 if( $res ) {

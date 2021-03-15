@@ -8,7 +8,12 @@ if( $mysqli->connect_errno ) {
 
 $mysqli->set_charset('utf8');
 
-$sql = "UPDATE data SET dvalue = '".$_GET['value']."' WHERE did= 1;";
+$sql = "
+INSERT INTO data (did,dvalue) 
+VALUES ('".$_POST['id']."','') 
+ON DUPLICATE KEY UPDATE 
+dvalue = '".$_POST['value']."';
+";
 $res = $mysqli->query($sql);
 
 if( $res ) {
