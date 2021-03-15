@@ -33,7 +33,7 @@ const app = new Vue({
     },
     //push the data to server side
     pushData:function(){
-        axios.get('http://47.241.127.18/api/save.php?value=' + this.userInput)
+        axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'value=' + this.userInput)
           .then(response => this.status = response.data)
           .catch(error => console.log(error));
     },
