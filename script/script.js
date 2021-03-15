@@ -38,7 +38,7 @@ const app = new Vue({
     },
     //get url
     getUrl:function(){
-      this.url = location.href ;
+      this.url = location.pathname ; ;
     }
   }
    
