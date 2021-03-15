@@ -23,14 +23,14 @@ const app = new Vue({
   methods:{
     //get the original data from the server side
     getData:function(){
-      axios.get('http://47.241.127.18/get.php')
+      axios.get('http://47.241.127.18/api/get.php')
       .then(response => this.userInput = response.data)
       .catch(error => console.log(error));
 
     },
     //push the data to server side
     pushData:function(){
-        axios.get('http://47.241.127.18/save.php?value=' + this.userInput)
+        axios.get('http://47.241.127.18/api/save.php?value=' + this.userInput)
           .then(response => this.status = response.data)
           .catch(error => console.log(error));
     }
