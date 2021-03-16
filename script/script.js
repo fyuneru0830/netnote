@@ -22,6 +22,7 @@ const app = new Vue({
   mounted : function(){
       this.getId();
       this.getData();
+      this.getUpdate();
   },
   methods:{
     //get the original data from the server side
@@ -50,6 +51,12 @@ const app = new Vue({
       this.getUrl();
       const idArray = this.url.split('/');
       this.id = idArray[idArray.length - 1];
+    },
+    getUpdate:function(){
+      const INTERVAL = 1000;
+      window.setInterval(function() {
+        this.getData();
+      }, INTERVAL);
     }
   }
    
