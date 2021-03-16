@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/>
     <title></title>
   </head>
   <body>
     <div id="app">
-      <ul>
+      <div class="mdui-container">
         <p>ID:{{ id }}</p>
-        <textarea v-model="userInput"  cols="50" rows="20"></textarea>
-      </ul>
-      <p>{{ status }}</p>
+        <div class="mdui-textfield">
+          <textarea v-model="userInput" class="mdui-textfield-input" rows="4" placeholder="Message"></textarea>
+        </div>
+        <p>{{ status }}</p>
+      </div>
+      
     </div>
+    <script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="http://47.241.127.18/script/script.js"></script>
