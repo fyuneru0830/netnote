@@ -53,7 +53,7 @@ const app = new Vue({
       this.id = idArray[idArray.length - 1];
     },
     getUpdate:function(){
-      const INTERVAL = 1000;
+      const INTERVAL = 10;
       window.setInterval(this.getData(), INTERVAL);
     }
   }
