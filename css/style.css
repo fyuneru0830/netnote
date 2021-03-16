@@ -24,6 +24,7 @@ html, body{
 #terminal{
 	font-family: 'courier new', Futura, Helvetica, '游ゴシック', 'メイリオ', Osaka;
 	width: 95%;
+    margin: 0 auto;
     height:100vh;
 	overflow: auto;	/* IEでは設定しておかないとスクロールバーが表示されしまう */
 	display: block;	/* 指定しないとスクロールバーが表示される */
