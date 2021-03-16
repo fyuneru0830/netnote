@@ -11,6 +11,7 @@ body, p, form, ul, ol, input, button{
 html, body{
 	width: 100%;
 	height: 100%;
+    background-color: black;
 }
 
 /* ブラウザ側で勝手に追加する青い枠線を消す */
@@ -22,7 +23,7 @@ html, body{
 */
 #terminal{
 	font-family: 'courier new', Futura, Helvetica, '游ゴシック', 'メイリオ', Osaka;
-	width: 100%;
+	width: 90vw;
     height:100vh;
 	overflow: auto;	/* IEでは設定しておかないとスクロールバーが表示されしまう */
 	display: block;	/* 指定しないとスクロールバーが表示される */
