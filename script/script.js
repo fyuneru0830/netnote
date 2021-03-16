@@ -19,10 +19,13 @@ const app = new Vue({
       this.pushData();
     }
   },
+  created : function(){
+    this.getUpdate();
+  },
   mounted : function(){
       this.getId();
       this.getData();
-      this.getUpdate();
+      
   },
   methods:{
     //get the original data from the server side
