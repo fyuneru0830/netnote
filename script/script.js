@@ -56,7 +56,7 @@ const app = new Vue({
       this.id = idArray[idArray.length - 1];
     },
     getUpdate:function(){
-      setInterval(() => { this.getData() }, 5000)
+      setInterval(() => { this.getData() }, 3000)
     }
   }
    
