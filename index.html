@@ -6,14 +6,16 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/>
+    <link rel="stylesheet" href="http://47.241.127.18/css/style.css"/>
     <title></title>
   </head>
   <body>
     <div id="app">
-          <textarea v-model="userInput" style="height:100vh;width:100vw"></textarea>
+        <textarea v-model="userInput" id="terminal" spellcheck="false"></textarea>
         <p>{{ status }}</p>
       
     </div>
+    <script src="http://47.241.127.18/script/terminal.js"></script>
     <script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
