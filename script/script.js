@@ -43,7 +43,7 @@ const app = new Vue({
     },
     //get url
     getUrl:function(){
-      this.url =  location.href;
+      this.url =  decodeURI(location.href);
     },
     //get id from url
     getId:function(){
