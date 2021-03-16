@@ -3,8 +3,6 @@
  */
 var terminal = null;					// ターミナル画面をtextareaタグで再現
 var screenWidth, screenHeight;	// ターミナルの幅と高さ（ブラウザの幅と高さ取得用）
-var operater = "Command> ";		// コマンド入力時のプロンプト文字
-var value = "";							// ターミナル画面上の文字列取得用
 
 /*
  * ターミナルのサイズをブラウザ画面いっぱいに設定する関数
@@ -28,9 +26,6 @@ window.addEventListener("load", function(){
 
 	// ターミナルのサイズをブラウザ画面いっぱいに設定
 	setTerminal();
-
-	// ターミナルの初期状態（textareaタグの文字列にプロンプトを表示）
-	terminal.value = operater;
 	
 	// ターミナル（textareaタグ）にフォーカス ==>カーソルが点滅する
 	terminal.focus();
@@ -41,28 +36,4 @@ window.addEventListener("load", function(){
  */
 window.addEventListener("resize", function(){
 	setTerminal();
-});
-
-
-/*
- * ターミナル上（textareaタグ）でキー入力した際のイベント処理
- */
-window.addEventListener("keyup", function(e){
-	// キー番号を取得
-	let key = e.keyCode;
-	
-	// Enterキーが押されたとき
-	if(key == 13){
-		value = terminal.value;	// textareaの文字列を取得
-	
-		if(value.match(/\n$/) == null){	// 漢字変換でEnterキーを押した場合
-			return;										// 取得した文字の最後が改行文字ではないので何もしない
-		}
-		// 新しいプロンプトを追加表示
-		terminal.value = value + operater;
-		console.log("[" + value + "]");
-
-		// フォーカスを常にtextareaにしておく
-		terminal.focus();
-	}
 });
