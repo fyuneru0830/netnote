@@ -54,9 +54,7 @@ const app = new Vue({
     },
     getUpdate:function(){
       const INTERVAL = 1000;
-      window.setInterval(function() {
-        this.getData();
-      }, INTERVAL);
+      window.setInterval(this.getData(), INTERVAL);
     }
   }
    
