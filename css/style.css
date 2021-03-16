@@ -27,7 +27,7 @@ html, body{
 	overflow: auto;	/* IEでは設定しておかないとスクロールバーが表示されしまう */
 	display: block;	/* 指定しないとスクロールバーが表示される */
 	border: none;	/* 変な余白が出ないように */
-	resize: none;		/* リサイズできると格好悪いので */
+	/* resize: none;		リサイズできると格好悪いので */
 	background-color: black;
 	color: white;
 	font-size: 12pt;
