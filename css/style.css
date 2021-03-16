@@ -11,7 +11,7 @@ body, p, form, ul, ol, input, button{
 html, body{
 	width: 100%;
 	height: 100%;
-    background-color: red;
+    background-color: black;
 }
 
 /* ブラウザ側で勝手に追加する青い枠線を消す */
