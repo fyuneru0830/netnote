@@ -1,9 +1,3 @@
-const router = new VueRouter({
-  routes: [
-    { path: '/a', redirect: '/b' }
-  ]
-})
-
 const app = new Vue({
   el: '#app',
   data: {
