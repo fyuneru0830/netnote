@@ -11,9 +11,9 @@
   </head>
   <body>
     <div id="app">
-      <div @click="sync" v-if="diff">
-        <div class="mdui-spinner"></div>
-        <button>Sync</button>
+      <div>
+        <div v-if="diff" class="mdui-spinner"></div>
+        <button v-if="diff" @click="sync">Sync</button>
       </div>
         <textarea v-model="textBox" id="terminal" rows="500" spellcheck="false"></textarea>
         <p>{{ status }}</p>
