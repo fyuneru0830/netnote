@@ -39,8 +39,9 @@ const app = new Vue({
       axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
       .then(response => this.serverSide = response.data)
       .catch(error => console.log(error));
-      this.textBox = this.serverSide;
-      console.log("serversideis "+ this.serverSide);
+      for(let i = 0;i<100;i++){
+        console.log("serversideis "+ this.serverSide);
+      }
     },
     sync:function(){
       this.textBox = this.serverSide;
