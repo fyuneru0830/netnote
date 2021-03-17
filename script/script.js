@@ -34,12 +34,9 @@ const app = new Vue({
   methods:{
     //get the original data from the server side
     getData:function(){
-      this.getDataNow = true;
       axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
       .then(response => this.userInput = response.data)
       .catch(error => console.log(error));
-      sleep(1000);
-      this.getDataNow = false;
     },
     //push the data to server side
     pushData:function(){
