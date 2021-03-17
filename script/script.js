@@ -30,7 +30,7 @@ const app = new Vue({
     //get the note id from the URL
       this.getId();
     //get the data from the server
-      this.getData();
+      this.firstGetData();
       
   },
   methods:{
