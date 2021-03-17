@@ -1,3 +1,9 @@
+const router = new VueRouter({
+  routes: [
+    { path: '/', redirect: '/b' }
+  ]
+})
+
 const app = new Vue({
   el: '#app',
   data: {
@@ -67,11 +73,6 @@ const app = new Vue({
       this.getUrl();
       const idArray = this.url.split('/');
       this.id = idArray[idArray.length - 1];
-      //if empty
-      function link(){
-        location.href='https://note.zshin.com/id/empty';
-      }
-      setTimeout("link()", 0);
   
     },
     update:function(){
