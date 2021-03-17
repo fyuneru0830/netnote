@@ -88,13 +88,13 @@ const app = new Vue({
       function check(){
         let count = 0;
         for(let i=0;i<300;i++){
-          if(diff == true){
+          if(this.diff == true){
             count++;
             console.log(count)
           }
         }
         if(count == 300){
-          showDiff = true;
+          this.showDiff = true;
         }
       }
       setInterval(() => { check() }, 100);
