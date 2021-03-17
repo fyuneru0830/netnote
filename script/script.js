@@ -65,10 +65,10 @@ const app = new Vue({
     },
     update:function(){
       this.getData();
-      if(this.textBox != this.serverSide){
-        this.diff = true;
-      }else{
+      if(this.textBox == this.serverSide){
         this.diff = false;
+      }else{
+        this.diff = true;
       }
     },
 
