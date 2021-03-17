@@ -15,15 +15,18 @@ const app = new Vue({
     userInput: function(){
       //count the length
       this.count = this.userInput.length;
-      //do the push data
+      //do the push data to server side
       this.pushData();
     }
   },
   created : function(){
+    //update the data from the server
     this.getUpdate();
   },
   mounted : function(){
+    //get the note id from the URL
       this.getId();
+    //get the data from the server
       this.getData();
       
   },
@@ -55,8 +58,10 @@ const app = new Vue({
       const idArray = this.url.split('/');
       this.id = idArray[idArray.length - 1];
     },
+    //automatic get update
     getUpdate:function(){
-      setInterval(() => { this.getData() }, 3000)
+      //auto update 1min
+      setInterval(() => { this.getData() }, 60000)
     }
   }
    
