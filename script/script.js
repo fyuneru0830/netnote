@@ -1,6 +1,6 @@
 const router = new VueRouter({
   routes: [
-    { path: '/', redirect: '/b' }
+    { path: '/a', redirect: '/b' }
   ]
 })
 
