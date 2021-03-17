@@ -70,13 +70,13 @@ const app = new Vue({
       }else{
         this.diff = true;
       }
-      console.log(this.diff);
+      // console.log(this.diff);
     },
 
     //automatic get update
     autoUpdate:function(){
       // auto update 1min
-      setInterval(() => { this.update() }, 100);
+      setInterval(() => { this.update() }, 3000);
     },
 
   }
