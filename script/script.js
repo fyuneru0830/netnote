@@ -43,7 +43,7 @@ const app = new Vue({
       this.textBox = "123456";
     },
     sync:function(){
-      this.textBox = this.serverSide;
+      //this.textBox = this.serverSide;
     },
     //push the data to server side
     pushData:function(){
