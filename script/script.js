@@ -8,7 +8,8 @@ const app = new Vue({
     //log the status from the server side
     status:"",
     url:"",
-    id:""
+    id:"",
+    getDataNow:false
   },
   watch:{
     //watch the userInput 
@@ -33,10 +34,11 @@ const app = new Vue({
   methods:{
     //get the original data from the server side
     getData:function(){
+      this.getDataNow = True;
       axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
       .then(response => this.userInput = response.data)
       .catch(error => console.log(error));
-
+      this.getDataNow = False;
     },
     //push the data to server side
     pushData:function(){
@@ -61,7 +63,7 @@ const app = new Vue({
     //automatic get update
     getUpdate:function(){
       //auto update 1min
-      setInterval(() => { this.getData() }, 60000)
+      setInterval(() => { this.getData() }, 1000)
     }
   }
    

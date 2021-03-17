@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="app">
-
+        <p v-if="getDataNow">Updating</p>
         <textarea v-model="userInput" id="terminal" rows="500" spellcheck="false"></textarea>
         <p>{{ status }}</p>
 
