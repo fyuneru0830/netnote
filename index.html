@@ -12,6 +12,7 @@
   <body>
     <div class="mdui-container">
     <div id="app">
+      <!-- if id empty -->
       <div v-if="id ==''">
         <div class="mdui-textfield mdui-textfield-floating-label">
           <label class="mdui-textfield-label">Title</label>
@@ -19,6 +20,8 @@
         </div>
         <button @click="createNewPage" class="mdui-btn mdui-btn-raised">Go</button>
       </div>
+      <!-- if id not empty -->
+      <div v-if="id != ''">
       <div style="height:40px">
         <div class="mdui-row">
           <div class="mdui-col-xs-10"><p style="font-weight:700;">{{ id }}</p></div>
@@ -32,7 +35,7 @@
       </div>
         <textarea v-model="textBox" id="terminal" rows="50" spellcheck="false"></textarea>
         <p>{{ status }}</p>
-
+     </div>
     </div>
   </div>
     <script src="https://note.zshin.com/script/terminal.js"></script>
