@@ -81,7 +81,7 @@ const app = new Vue({
     //automatic get update
     autoUpdate:function(){
       // auto update 1min
-      setInterval(() => { this.update() }, 30000);
+      setInterval(() => { this.update() }, 100);
     },
 
   }
