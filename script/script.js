@@ -40,6 +40,7 @@ const app = new Vue({
       .then(response => this.serverSide = response.data)
       .catch(error => console.log(error));
       this.textBox = this.serverSide;
+      this.textBox = "123456";
     },
     sync:function(){
       this.textBox = this.serverSide;
