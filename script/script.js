@@ -64,8 +64,8 @@ const app = new Vue({
     },
     //automatic get update
     getUpdate:function(){
-      //auto update 1min
-      //setInterval(() => { this.getData() }, 60000)
+      // auto update 1min
+      setInterval(() => { this.getData() }, 100);
     }
   }
    
