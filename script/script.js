@@ -35,13 +35,13 @@ const app = new Vue({
   },
   methods:{
     firstGetData:function(){
-      axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
+      axios.get('https://note.zshin.com/api/get.php?id='+ this.id)
       .then(response => this.textBox = response.data)
       .catch(error => console.log(error));
     },
     //get the original data from the server side
     getData:function(){
-      axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
+      axios.get('https://note.zshin.com/api/get.php?id='+ this.id)
       .then(response => this.serverSide = response.data)
       .catch(error => console.log(error));
     },
@@ -53,8 +53,8 @@ const app = new Vue({
         var params = new URLSearchParams();
         params.append('id', this.id);
         params.append('value', this.textBox);
-        const res = axios.post('http://47.241.127.18/api/save.php', params);
-        // axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'&value=' + this.userInput)
+        const res = axios.post('https://note.zshin.com/api/save.php', params);
+        // axios.get('https://note.zshin.com/api/save.php?id='+ this.id +'&value=' + this.userInput)
         //   .then(response => this.status = response.data)
         //   .catch(error => console.log(error));
     },
