@@ -2,20 +2,20 @@ const app = new Vue({
   el: '#app',
   data: {
     //textbox
-    userInput:"",
+    textBox:"",
+
     //count the char
     count:0,
     //log the status from the server side
     status:"",
     url:"",
-    id:"",
-    getDataNow:false
+    id:""
   },
   watch:{
     //watch the userInput 
     userInput: function(){
       //count the length
-      this.count = this.userInput.length;
+      this.count = this.textBox.length;
       //do the push data to server side
       this.pushData();
     }
@@ -35,14 +35,14 @@ const app = new Vue({
     //get the original data from the server side
     getData:function(){
       axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
-      .then(response => this.userInput = response.data)
+      .then(response => this.textBox = response.data)
       .catch(error => console.log(error));
     },
     //push the data to server side
     pushData:function(){
         var params = new URLSearchParams();
         params.append('id', this.id);
-        params.append('value', this.userInput);
+        params.append('value', this.textBox);
         const res = axios.post('http://47.241.127.18/api/save.php', params);
         // axios.get('http://47.241.127.18/api/save.php?id='+ this.id +'&value=' + this.userInput)
         //   .then(response => this.status = response.data)
