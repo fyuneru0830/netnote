@@ -13,7 +13,7 @@ const app = new Vue({
   },
   watch:{
     //watch the userInput 
-    userInput: function(){
+    textBox: function(){
       //count the length
       this.count = this.textBox.length;
       //do the push data to server side
