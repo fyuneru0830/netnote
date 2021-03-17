@@ -11,7 +11,8 @@ const app = new Vue({
     status:"",
     url:"",
     id:"",
-    diff:false
+    diff:false,
+    showDiff:false
   },
   watch:{
     //watch the userInput 
@@ -80,10 +81,23 @@ const app = new Vue({
 
     //automatic get update
     autoUpdate:function(){
-      // auto update 1min
       setInterval(() => { this.update() }, 100);
     },
-
+    changeShowDiff:function(){
+      function check(){
+        let count = 0;
+        for(let i=0;i<300;i++){
+          if(diff == true){
+            count++;
+            console.log(count)
+          }
+        }
+        if(count == 300){
+          showDiff = true;
+        }
+      }
+      setInterval(() => { check() }, 100);
+    }
   }
    
 })
