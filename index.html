@@ -17,7 +17,7 @@
             <div class="mdui-progress-indeterminate"></div>
           </div>
         </div>
-        <button v-if="diff" @click="sync">Sync</button>
+        <button v-if="diff" @click="sync" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe627;</i></button>
       </div>
         <textarea v-model="textBox" id="terminal" rows="500" spellcheck="false"></textarea>
         <p>{{ status }}</p>
