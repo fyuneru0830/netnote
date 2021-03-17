@@ -13,7 +13,6 @@
     <div class="mdui-container">
     <div id="app">
       <div style="height:40px">
-        <div style="text-align: right;">
         <div v-if="diff">
           <div class="mdui-progress">
             <div class="mdui-progress-indeterminate"></div>
@@ -23,7 +22,6 @@
           <div class="mdui-col-xs-12 mdui-col-sm-8"><h1>{{ id }}</h1></div>
         <div class="mdui-col-xs-6 mdui-col-sm-4"><button v-if="diff" @click="sync" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe627;</i></button></div>
         </div>
-      </div>
       </div>
         <textarea v-model="textBox" id="terminal" rows="500" spellcheck="false"></textarea>
         <p>{{ status }}</p>
