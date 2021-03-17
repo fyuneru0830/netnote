@@ -3,7 +3,8 @@ const app = new Vue({
   data: {
     //textbox
     textBox:"",
-
+    //server side
+    serverSide:"",
     //count the char
     count:0,
     //log the status from the server side
@@ -29,13 +30,14 @@ const app = new Vue({
       this.getId();
     //get the data from the server
       this.getData();
+      this.textBox = this.serverSide;
       
   },
   methods:{
     //get the original data from the server side
     getData:function(){
       axios.get('http://47.241.127.18/api/get.php?id='+ this.id)
-      .then(response => this.textBox = response.data)
+      .then(response => this.serverSide = response.data)
       .catch(error => console.log(error));
     },
     //push the data to server side
