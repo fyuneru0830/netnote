@@ -70,6 +70,7 @@ const app = new Vue({
       }else{
         this.diff = true;
       }
+      console.log(this.diff);
     },
 
     //automatic get update
