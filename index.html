@@ -14,9 +14,10 @@
     <div id="app">
       <div v-if="id ==''">
         <div class="mdui-textfield mdui-textfield-floating-label">
-          <label class="mdui-textfield-label">URL</label>
-          <input class="mdui-textfield-input" type="text"/>
+          <label class="mdui-textfield-label">Title</label>
+          <input v-model="emptyTitle" class="mdui-textfield-input" type="text"/>
         </div>
+        <button @click="createNewPage" class="mdui-btn mdui-btn-raised">Go</button>
       </div>
       <div style="height:40px">
         <div class="mdui-row">

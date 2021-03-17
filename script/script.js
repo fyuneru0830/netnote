@@ -1,6 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
+    emptyTitle:"",
     //textbox
     textBox:"",
     //server side
@@ -34,6 +35,9 @@ const app = new Vue({
       
   },
   methods:{
+    createNewPage:function(){
+      location.href = "https://note.zshin.com/id/" + this.emptyTitle;
+    },
     firstGetData:function(){
       axios.get('https://note.zshin.com/api/get.php?id='+ this.id)
       .then(response => this.textBox = response.data)
