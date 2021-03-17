@@ -26,6 +26,7 @@ const app = new Vue({
   created : function(){
     //update the data from the server
     this.autoUpdate();
+    this.changeShowDiff();
   },
   mounted : function(){
     //get the note id from the URL
