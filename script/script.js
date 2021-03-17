@@ -67,6 +67,11 @@ const app = new Vue({
       this.getUrl();
       const idArray = this.url.split('/');
       this.id = idArray[idArray.length - 1];
+      //if empty
+      setTimeout("link()", 0);
+      function link(){
+        location.href='https://note.zshin.com/id/empty';
+      }
     },
     update:function(){
       this.getData();
