@@ -10,7 +10,8 @@ const app = new Vue({
     //log the status from the server side
     status:"",
     url:"",
-    id:""
+    id:"",
+    diff:false
   },
   watch:{
     //watch the userInput 
@@ -62,11 +63,21 @@ const app = new Vue({
       const idArray = this.url.split('/');
       this.id = idArray[idArray.length - 1];
     },
+    update:function(){
+      this.getData();
+      if(this.textBox != this.serverSide){
+        this.diff = true;
+      }else{
+        this.diff = false;
+      }
+    },
+
     //automatic get update
-    getUpdate:function(){
+    autoUpdate:function(){
       // auto update 1min
-      setInterval(() => { this.getData() }, 100);
-    }
+      setInterval(() => { this.update() }, 100);
+    },
+
   }
    
 })
