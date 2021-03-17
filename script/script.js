@@ -40,10 +40,10 @@ const app = new Vue({
       .then(response => this.serverSide = response.data)
       .catch(error => console.log(error));
       this.textBox = this.serverSide;
-      this.textBox = "123456";
+      console.log(this.serverSide);
     },
     sync:function(){
-      //this.textBox = this.serverSide;
+      this.textBox = this.serverSide;
     },
     //push the data to server side
     pushData:function(){
