@@ -12,7 +12,7 @@
   <body>
     <div id="app">
       <div style="height:30px">
-        <div  class="mdui-spinner"></div>
+        <div v-if="diff"><div class="mdui-spinner"></div></div>
         <button v-if="diff" @click="sync">Sync</button>
       </div>
         <textarea v-model="textBox" id="terminal" rows="500" spellcheck="false"></textarea>
