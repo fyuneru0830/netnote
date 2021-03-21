@@ -30,6 +30,8 @@ const app = new Vue({
   mounted : function(){
     //get the note id from the URL
       this.getId();
+    //set Title and Description
+      this.setTitleandDes();
     //get the data from the server
       this.firstGetData();
       
@@ -80,7 +82,17 @@ const app = new Vue({
       }else{
         this.diff = true;
       }
-      // console.log(this.diff);
+    },
+    setTitleandDes:function(){
+      const title = this.getId
+      const description = ""
+      document.title = title
+      document.querySelector("meta[property='og:title']")
+      　.setAttribute('content', title)
+      document.querySelector("meta[name='description']")
+      　.setAttribute('content', description)
+      document.querySelector("meta[property='og:description']")
+      　.setAttribute('content', description)
     },
 
     //automatic get update
